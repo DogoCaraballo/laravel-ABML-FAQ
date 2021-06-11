@@ -12,7 +12,7 @@
       ### 1) Requisitos previos
         - Xampp (En mi caso uso xampp para correr el proyecto, otras guías pueden usar php artisan)
         - PostgreSQL.
-        - Composer (Supuestamente este proyecto viene con laravel incluido)
+        - Composer y Laravel (Supuestamente este proyecto viene con laravel incluido)
       ### 2) Clonar el proyecto
         - Clonarlo preferentemente dentro de tu carpeta de proyectos en /xampp/htdocs/
       ### 3) Profit
