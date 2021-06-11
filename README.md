@@ -13,19 +13,23 @@
         - Xampp (En mi caso uso xampp para correr el proyecto, otras guías pueden usar php artisan)
         - PostgreSQL.
         - Composer y Laravel (Supuestamente este proyecto viene con laravel incluido)
-      ### 2) Clonar el proyecto
-        - Clonarlo preferentemente dentro de tu carpeta de proyectos en /xampp/htdocs/
-      ### 3) Profit
+      ### 2) Requisitos opcionales
+        - Un programa para clonar proyectos (Para llevar este código a tu PC y viceversa)
+        - Recomiendo: GitHubDesktop o Git.
+      ### 3) Clonar el proyecto
+        - Clonar el código preferentemente dentro de tu carpeta de proyectos en /xampp/htdocs/
+      ### 4) Profit
         - Felicidades, ya podés empezar a romper todo.
 
 
-* ### Uso
+* ### Uso y Edición
     - Pull/Clonar (Copiar cambios desde esta pagina)
         *  Varía segun tu programa para clonar.
-    - Utilizar cualquier editor para editar los archivos
-        *  Recomiendo Visual Studio Code ya que tiene tiene bastantes funciones de ayuda :)
-        *  Se puede editar hasta con NotePad, pero no tiene soporte para auto-completado, ver funciones, auto-llaves ni nada.
-    - Push request (Realizar cambios en esta pagina)
+    - Utilizar cualquier editor de texto para abrir los archivos
+        *  Recomiendo Visual Studio Code ya que tiene tiene bastantes características como ver funciones existentes, auto-llaves, etc.
+    - Editar el proyecto
+        *  Realizar algun cambio en el codigo, guardar el archivo, y re-abrir la Vista para ver los cambios.
+    - Push request (Realizar cambios a esta pagina)
         *  Varía segun tu programa para clonar.
 
 
@@ -41,8 +45,8 @@
   * .env: /prueba/.env
 
 # Configuracion
-* ### Unica vez
-  * Activar las siguientes extensiones en el archivo ./xampp/php/php.ini
+* ### Única vez
+  * Activar las siguientes extensiones en el archivo ./Xampp/php/php.ini
      * extension=pdo_pgsql
      * extension=pgsql
   * Luego de clonar el proyecto, cambiar el 'Acceso de la Base de Datos' en tu archivo /.env
