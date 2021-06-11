@@ -41,7 +41,7 @@
   * vista.php: /prueba/public/abm-preguntasfrecuentes.blade.php
   * web.php: /prueba/routes/web.php
   * Controller.php: /prueba/app/http/controllers/Controller.php
-* ### Archivo Configuracion 'Acceso de la basde de Datos'
+* ### Archivo Configuracion 'Acceso de la base de Datos'
   * .env: /prueba/.env
 
 # Configuracion
@@ -53,4 +53,4 @@
      * Segun tu configuracion de postgresql, deberías poner nombre de la base, puerto, contrasenia, usuario..
 * ### Posiblemente varias veces
   * Actualizar las tablas de tu Base de Datos
-      * Es necesario que modifiques tus tablas en tu [DataBase] usada en el proyecto ya que es muy probable que hayan cambios al momento de manejar datos.
+      * Es necesario que modifiques/actualices tus tablas en tu [DataBase] para ser compatible con este proyecto ya que es muy probable que hayan cambios futuros en la estructura de las tablas.
