@@ -30,7 +30,8 @@
 
 # Archivos
 * ### Ruta del proyecto
-  * ./xampp/htdocs/proyectos/prueba
+  * Idealmente sería donde clonás este proyecto.
+  * Mi caso: C:/Archivos de Programa/xampp/htdocs/proyectos/prueba
 * ### Archivos principales editables del proyecto
   * vista.php: /prueba/public/abm-preguntasfrecuentes.blade.php
   * web.php: /prueba/routes/web.php
