@@ -38,7 +38,7 @@
   * Idealmente sería donde clonás este proyecto.
   * Mi caso: C:/Archivos de Programa/xampp/htdocs/proyectos/prueba
 * ### Archivos principales editables del proyecto
-  * vista.php: /prueba/public/abm-preguntasfrecuentes.blade.php
+  * vista.php: /prueba/resources/views/abm-preguntasfrecuentes.blade.php
   * web.php: /prueba/routes/web.php
   * Controller.php: /prueba/app/http/controllers/Controller.php
 * ### Archivo Configuracion 'Acceso de la base de Datos'
