@@ -2,7 +2,8 @@
 
 
 ## Página de la vista
-* http://localhost/proyectos/prueba/public/abm-preguntasfrecuentes
+* Según donde hayas clonado tu proyecto y tu configuración de proyectos de Xampp.
+* Mi caso: http://localhost/proyectos/prueba/public/abm-preguntasfrecuentes
 
 
 # Instalación y uso
