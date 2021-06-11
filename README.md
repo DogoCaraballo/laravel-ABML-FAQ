@@ -50,4 +50,7 @@
      * extension=pdo_pgsql
      * extension=pgsql
   * Luego de clonar el proyecto, cambiar el 'Acceso de la Base de Datos' en tu archivo /.env
-    * Segun tu configuracion de postgresql, deberías poner nombre de la base, puerto, contrasenia, usuario..
+     * Segun tu configuracion de postgresql, deberías poner nombre de la base, puerto, contrasenia, usuario..
+* ### Posiblemente varias veces
+  * Actualizar las tablas de tu Base de Datos
+      * Es necesario que modifiques tus tablas en tu [DataBase] usada en el proyecto ya que es muy probable que hayan cambios al momento de manejar datos.
