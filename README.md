@@ -1,14 +1,15 @@
 # Base de Datos
 ## Base de Datos Actual
-* Script de la Base de Datos actual
-* (Realizar dentro de una base de datos ya existente)
-* (Talvez la base de datos existente deba ser migrada con Laravel, por eso el script solamente tiene la creación de tablas)
-* create table preguntas(
-    id int generated always as IDENTITY,
-    pregunta text not null,
-    respuesta text not null,
-    autor text );
-* Formato estipulado:
+* Script de la Base de Datos actual (Solamente la creación de las Tablas)
+<pre>
+    create table preguntas(
+      id int generated always as IDENTITY,
+      pregunta text not null,
+      respuesta text not null,
+      autor text 
+    );
+</pre>
+* Formato estipulado de la Base:
 
 ![alt text](https://i.imgur.com/QpBVuLJ.png)
 
