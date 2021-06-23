@@ -17,9 +17,9 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', function () {
-    return view('abm-preguntasfrecuentes');
-});
+#Route::get('/', function () {
+#});
 
-#llamo funcion obtenerTabla
-Route::get('abm-preguntasfrecuentes',[Controller::class,'obtenerTabla']);
+Route::get('abm-preguntasfrecuentes',[FAQController::class,'obtenerTabla'])->name('cargarTabla');
+
+
