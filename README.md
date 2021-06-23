@@ -1,5 +1,14 @@
-# Accesos
+# Base de Datos
+## Base de Datos Actual
+* Script de la Base de Datos actual:
+* create table preguntas(
+    id int generated always as IDENTITY,
+    pregunta text not null,
+    respuesta text not null,
+    autor text );
 
+
+# Accesos
 
 ## Página de la vista
 * Según donde hayas clonado tu proyecto y tu configuración de proyectos de Xampp.
@@ -7,30 +16,10 @@
 
 
 # Instalación y uso
-* ### Instalación
-    - ### Pasos:
-      ### 1) Requisitos previos
-        - Xampp (En mi caso uso xampp para correr el proyecto, otras guías pueden usar php artisan)
-        - PostgreSQL.
-        - Composer y Laravel (Supuestamente este proyecto viene con laravel incluido)
-      ### 2) Requisitos opcionales
-        - Un programa para clonar proyectos (Para llevar este código a tu PC y viceversa)
-        - Recomiendo: GitHubDesktop o Git.
-      ### 3) Clonar el proyecto
-        - Clonar el código preferentemente dentro de tu carpeta de proyectos en /xampp/htdocs/
-      ### 4) Profit
-        - Felicidades, ya podés empezar a romper todo.
-
-
-* ### Uso y Edición
-    - Pull/Clonar (Copiar cambios desde esta pagina)
-        *  Varía segun tu programa para clonar.
-    - Utilizar cualquier editor de texto para abrir los archivos
-        *  Recomiendo Visual Studio Code ya que tiene tiene bastantes características como ver funciones existentes, auto-llaves, etc.
-    - Editar el proyecto
-        *  Realizar algun cambio en el codigo, guardar el archivo, y re-abrir la Vista para ver los cambios.
-    - Push request (Realizar cambios a esta pagina)
-        *  Varía segun tu programa para clonar.
+* Requisitos previos
+    - Xampp (En mi caso uso xampp para correr el proyecto, otras guías pueden usar php artisan)
+    - PostgreSQL.
+    - Composer y Laravel (Supuestamente este proyecto viene con laravel incluido)
 
 
 # Archivos
@@ -38,9 +27,9 @@
   * Idealmente sería donde clonás este proyecto.
   * Mi caso: C:/Archivos de Programa/xampp/htdocs/proyectos/prueba
 * ### Archivos principales editables del proyecto
-  * vista.php: /prueba/resources/views/abm-preguntasfrecuentes.blade.php
-  * web.php: /prueba/routes/web.php
-  * Controller.php: /prueba/app/http/controllers/Controller.php
+  * Vista: /prueba/resources/views/abm-preguntasfrecuentes.blade.php
+  * Rutas: /prueba/routes/web.php
+  * Controller: /prueba/app/http/controllers/FAQController.php
 * ### Archivo Configuracion 'Acceso de la base de Datos'
   * .env: /prueba/.env
 
