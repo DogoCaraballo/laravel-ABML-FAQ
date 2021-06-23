@@ -8,6 +8,9 @@
     pregunta text not null,
     respuesta text not null,
     autor text );
+* Formato estipulado:
+
+![alt text](https://i.imgur.com/QpBVuLJ.png)
 
 
 # Accesos
