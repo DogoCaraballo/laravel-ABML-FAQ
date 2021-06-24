@@ -25,9 +25,22 @@ class FAQController extends BaseController
 
         return view('abm-preguntasfrecuentes', ['datos' => $datos],['cantidad' => $cantidad]);
     }
-    public function Store(Request $request)
+
+    public function guardarRegistro(Request $request)
     {
-       return $request;
+        //dd($request->all());
+        $preg = $request->input('Pregunta');
+        $resp = $request->input('Respuesta');
+        $autor = $request->input('Autor');
+        if (strlen($preg)>0 and strlen($resp)>0){
+            DB::table('preguntas')->insert([
+                'pregunta' => $preg,
+                'respuesta' => $resp,
+                'autor' => $autor
+            ]);
+        }
+
+        return redirect()->route('cargarTabla');
     }
 
 

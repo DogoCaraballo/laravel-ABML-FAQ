@@ -9,14 +9,14 @@
         
         <h3>Crear Pregunta</h3>
 
-        <form action="{{route('AltaPregunta.store')}}" method="POST">
+        <form action="{{route('AltaPregunta')}}" method="POST">
           
             @csrf
 
             <label>
                 Pregunta:
                 <br>
-                <input type="text" name="pregunta">
+                <input type="text" name="Pregunta">
             </label>
             
             <br>
@@ -24,7 +24,7 @@
             <label>
                 Respuesta:
                 <br>
-                <input type="text" name="respuesta">
+                <input type="text" name="Respuesta">
             </label>
 
             <br>
@@ -32,7 +32,7 @@
             <label >
                 Autor:
                 <br>
-                <input type="text" name="autor">
+                <input type="text" name="Autor">
             </label>
       
             <br>
