@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-
+use App\Models\pregunta;
 
 class FAQController extends BaseController
 {
@@ -24,6 +24,10 @@ class FAQController extends BaseController
         $cantidad = DB::table('preguntas')->count();
 
         return view('abm-preguntasfrecuentes', ['datos' => $datos],['cantidad' => $cantidad]);
+    }
+    public function Store(Request $request)
+    {
+       return $request;
     }
 
 

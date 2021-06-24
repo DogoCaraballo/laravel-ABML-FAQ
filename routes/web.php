@@ -22,4 +22,5 @@ use App\Http\Controllers\Controller;
 
 Route::get('abm-preguntasfrecuentes',[FAQController::class,'obtenerTabla'])->name('cargarTabla');
 
+Route::post('AltaPregunta',[FAQController::class,'Store'])->name('AltaPregunta.store');
 
