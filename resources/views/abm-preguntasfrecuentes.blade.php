@@ -65,7 +65,7 @@
                     <td>{{$dato->pregunta}}</td>
                     <td>{{$dato->respuesta}}</td>
                     <td>{{$dato->autor}}</td>
-                    <td></td>
+                    <td>{{$dato->estado}}</td>
                     <td><form action="">
                     <button type="submit">Editar</button>    
                     </form></td>

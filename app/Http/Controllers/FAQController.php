@@ -19,9 +19,10 @@ class FAQController extends BaseController
     public function obtenerTabla()
     {
         $datos = DB::table('preguntas')
+            ->where('estado',1)
             ->orderBy('id')
             ->get();
-        $cantidad = DB::table('preguntas')->count();
+        $cantidad = DB::table('preguntas')->where('estado',1)->count();
 
         return view('abm-preguntasfrecuentes', ['datos' => $datos],['cantidad' => $cantidad]);
     }
