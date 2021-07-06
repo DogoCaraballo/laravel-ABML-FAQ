@@ -6,7 +6,8 @@
       id int generated always as IDENTITY,
       pregunta text not null,
       respuesta text not null,
-      autor text 
+      autor text,
+      estado int default(1) 
     );
 </pre>
 * Formato estipulado de la Base:
