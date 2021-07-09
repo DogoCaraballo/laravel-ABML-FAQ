@@ -64,4 +64,24 @@ class FAQController extends BaseController
         }
         return redirect()->route('cargarTabla');
     }
+    
+    
+    public function eliminarRegistro(Request $request){
+        $btnEliminar =$request->input('btnEliminar');
+        if($btnEliminar!=null){
+            $id = $request->input('txtId');
+            
+            if (strlen($pregunta)>0){
+                DB::table('preguntas')
+                ->where('id','=', $id)
+                ->update([
+                    'estado' => 0
+                ]);
+            }
+            
+        }
+        return redirect()->route('cargarTabla');
+    }
+    
+    
 }
