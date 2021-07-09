@@ -22,7 +22,7 @@ class FAQController extends BaseController
             //->where('estado',1)
             ->orderBy('id')
             ->get();
-        $cantidad = DB::table('preguntas')->where('estado',1)->count();
+        $cantidad = DB::table('preguntas')->count();
 
         return view('abm-preguntasfrecuentes', ['datos' => $datos],['cantidad' => $cantidad]);
     }
