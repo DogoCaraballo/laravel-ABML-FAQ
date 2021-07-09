@@ -71,7 +71,7 @@
                     <td>
                     <button type="submit" name="btnEditar" value="btnEditar">Editar</button>    
                     </td>
-                    <td><form action="">
+                    <td><form action="{{route('eliminarRegistro')}}" method="POST">
                     <button type="submit">Eliminar</button>    
                     </form></td>
                     </tr>
