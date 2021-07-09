@@ -27,3 +27,5 @@ Route::post('AltaPregunta',[FAQController::class,'guardarRegistro'])->name('Alta
 Route::post('modificarRegistro',[FAQController::class, 'modificarRegistro'])->name('modificarRegistro');
 
 Route::post('eliminarRegistro',[FAQController::class, 'eliminarRegistro'])->name('eliminarRegistro');
+
+Route::post('toggleRegistro',[FAQController::class, 'toggleRegistro'])->name('toggleRegistro');

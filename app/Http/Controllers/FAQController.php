@@ -19,7 +19,7 @@ class FAQController extends BaseController
     public function obtenerTabla()
     {
         $datos = DB::table('preguntas')
-            ->where('estado',1)
+            //->where('estado',1)
             ->orderBy('id')
             ->get();
         $cantidad = DB::table('preguntas')->where('estado',1)->count();
@@ -45,13 +45,13 @@ class FAQController extends BaseController
     }
 
     public function modificarRegistro(Request $request){
-        $btnModificar =$request->input('btnEditar');
-        if($btnModificar!=null){
-            $id = $request->input('txtId');
+        //$btnModificar =$request->input('btnEditar');
+        //if($btnModificar!=null){
+            $id = $request->input('id');
             $pregunta = $request->input('txtPregunta');
             $respuesta = $request->input('txtRespuesta');
             $autor = $request->input('txtAutor');
-            if (strlen($pregunta)>0){
+            if (strlen($pregunta)>0 and strlen($respuesta)>0){
                 DB::table('preguntas')
                 ->where('id','=', $id)
                 ->update([
@@ -61,27 +61,39 @@ class FAQController extends BaseController
                 ]);
             }
            
-        }
+        //}
         return redirect()->route('cargarTabla');
     }
     
+    
+    public function toggleRegistro(Request $request){
+        //$btnEliminar =$request->input('btnEliminar');
+        //if($btnEliminar!=null){
+            $id = $request->input('id');
+            $estadoActual = $request->input('estado');
+            if($estadoActual == 1)
+                DB::table('preguntas')
+                ->where ('id',"=",$id)
+                ->update(['estado' => 0 ]);
+            else
+                DB::table('preguntas')
+                ->where ('id',"=",$id)
+                ->update(['estado' => 1 ]);
+
+            
+        //}
+        return redirect()->route('cargarTabla');
+    }
     
     public function eliminarRegistro(Request $request){
-        $btnEliminar =$request->input('btnEliminar');
-        if($btnEliminar!=null){
-            $id = $request->input('txtId');
-            
-            if (strlen($pregunta)>0){
-                DB::table('preguntas')
-                ->where('id','=', $id)
-                ->update([
-                    'estado' => 0
-                ]);
-            }
-            
-        }
+        //SE BORRA FISICAMENTE, CUIDADO
+
+        $idABorrar = $request->input('id');
+        DB::table('preguntas')
+            ->where ('id',"=",$idABorrar)
+            ->delete();
+
         return redirect()->route('cargarTabla');
     }
-    
     
 }

@@ -53,29 +53,38 @@
                 <th>Pregunta</th>
                 <th>Respuesta</th>
                 <th>Autor</th>
-                <th>Estado</th>
-                <th>Iditar</th>
+                <th>Editar</th>
                 <th>Eliminar</th>
+                <th>Estado</th>
     
                 </tr>
 
                 @foreach ($datos as $dato)
-                <form action="{{route('modificarRegistro')}}" method="POST">
+                <form action="{{route('modificarRegistro', ['id' => $dato->id])}}" method="POST">
                     @csrf
                     <tr>
-                    <td> <input type="text" name="txtId" value="{{$dato->id}}" readonly></td>
+                    <td style="text-align: center"> <div>{{$dato->id}}</div></td>
                     <td> <input type="text" name="txtPregunta" value="{{$dato->pregunta}}"></td>
                     <td> <input type="text" name="txtRespuesta" value="{{$dato->respuesta}}"></td>
                     <td> <input type="text" name="txtAutor" value="{{$dato->autor}}"></td>
-                    <td> <input type="text" name="txtEstado" value="{{$dato->estado}}"></td>
+                    
                     <td>
                     <button type="submit" name="btnEditar" value="btnEditar">Editar</button>    
                     </td>
-                    <td><form action="{{route('eliminarRegistro')}}" method="POST">
-                    <button type="submit">Eliminar</button>    
-                    </form></td>
+                    </form>
+                    <td><form action="{{ route('eliminarRegistro', ['id' => $dato->id]) }}" method="POST" onclick="return confirm('Continuar? Esto no se puede revertir...')">
+                        @csrf
+                        <button type="submit">Eliminar</button>    
+                        </form>
+                    </td>
+                    <td style="text-align: center"> 
+                        <form action="{{ route('toggleRegistro', ['id' => $dato->id,'estado' => $dato->estado]) }}" method="POST">
+                        @csrf
+                        <button type="submit">{{$dato->estado}}</button>
+                        </form>
+                    </td>
                     </tr>
-                </form>
+                
                 @endforeach
 
             </table>
