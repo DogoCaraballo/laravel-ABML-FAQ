@@ -51,7 +51,7 @@ class FAQController extends BaseController
             $pregunta = $request->input('txtPregunta');
             $respuesta = $request->input('txtRespuesta');
             $autor = $request->input('txtAutor');
-            if (strlen($pregunta)>0 and strlen($respuesta)>0){
+            if (strlen($pregunta)>0 and strlen($respuesta)>0 and strlen($autor)>0){
                 DB::table('preguntas')
                 ->where('id','=', $id)
                 ->update([
