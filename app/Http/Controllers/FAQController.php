@@ -44,5 +44,22 @@ class FAQController extends BaseController
         return redirect()->route('cargarTabla');
     }
 
-
+    public function modificarRegistro(Request $request){
+        $id = $request->input('txtId');
+        $pregunta = $request->input('txtPregunta');
+        $respuesta = $request->input('txtRespuesta');
+        $autor = $request->input('txtAutor');
+        $estado = $request->input('txtEstado');
+        if (strlen($pregunta)>0){
+            DB::table('preguntas')
+            ->where('id','=', $id)
+            ->update([
+                'pregunta' => $pregunta,
+                'respuesta'=> $respuesta,
+                'autor' => $autor,
+                'estado' => $estado
+            ]);
+        }
+        return redirect()->route('cargarTabla');
+    }
 }

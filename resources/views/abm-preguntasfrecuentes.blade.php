@@ -60,19 +60,21 @@
                 </tr>
 
                 @foreach ($datos as $dato)
+                <form action="{{route('modificarRegistro')}}" method="GET">
                     <tr>
-                    <td>{{$dato->id}}</td>
-                    <td>{{$dato->pregunta}}</td>
-                    <td>{{$dato->respuesta}}</td>
-                    <td>{{$dato->autor}}</td>
-                    <td>{{$dato->estado}}</td>
-                    <td><form action="">
+                    <td> <input type="text" name="txtId" value="{{$dato->id}}" readonly></td>
+                    <td> <input type="text" name="txtPregunta" value="{{$dato->pregunta}}"></td>
+                    <td> <input type="text" name="txtRespuesta" value="{{$dato->respuesta}}"></td>
+                    <td> <input type="text" name="txtAutor" value="{{$dato->autor}}"></td>
+                    <td> <input type="text" name="txtEstado" value="{{$dato->estado}}"></td>
+                    <td>
                     <button type="submit">Editar</button>    
-                    </form></td>
+                    </td>
                     <td><form action="">
                     <button type="submit">Eliminar</button>    
                     </form></td>
                     </tr>
+                </form>
                 @endforeach
 
             </table>
