@@ -60,7 +60,8 @@
                 </tr>
 
                 @foreach ($datos as $dato)
-                <form action="{{route('modificarRegistro')}}" method="GET">
+                <form action="{{route('modificarRegistro')}}" method="POST">
+                    @csrf
                     <tr>
                     <td> <input type="text" name="txtId" value="{{$dato->id}}" readonly></td>
                     <td> <input type="text" name="txtPregunta" value="{{$dato->pregunta}}"></td>
@@ -68,7 +69,7 @@
                     <td> <input type="text" name="txtAutor" value="{{$dato->autor}}"></td>
                     <td> <input type="text" name="txtEstado" value="{{$dato->estado}}"></td>
                     <td>
-                    <button type="submit">Editar</button>    
+                    <button type="submit" name="btnEditar" value="btnEditar">Editar</button>    
                     </td>
                     <td><form action="">
                     <button type="submit">Eliminar</button>    

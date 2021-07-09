@@ -24,4 +24,4 @@ Route::get('abm-preguntasfrecuentes',[FAQController::class,'obtenerTabla'])->nam
 
 Route::post('AltaPregunta',[FAQController::class,'guardarRegistro'])->name('AltaPregunta');
 
-Route::get('modificarRegistro',[FAQController::class, 'modificarRegistro'])->name('modificarRegistro');
+Route::post('modificarRegistro',[FAQController::class, 'modificarRegistro'])->name('modificarRegistro');
