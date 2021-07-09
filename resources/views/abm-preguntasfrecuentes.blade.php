@@ -16,7 +16,7 @@
             <label>
                 Pregunta:
                 <br>
-                <input type="text" name="Pregunta">
+                <input type="text" name="Pregunta" required>
             </label>
             
             <br>
@@ -24,7 +24,7 @@
             <label>
                 Respuesta:
                 <br>
-                <input type="text" name="Respuesta">
+                <input type="text" name="Respuesta" required>
             </label>
 
             <br>
@@ -32,7 +32,7 @@
             <label >
                 Autor:
                 <br>
-                <input type="text" name="Autor">
+                <input type="text" name="Autor" required>
             </label>
       
             <br>
@@ -64,9 +64,9 @@
                     @csrf
                     <tr>
                     <td style="text-align: center"> <div>{{$dato->id}}</div></td>
-                    <td> <input type="text" name="txtPregunta" value="{{$dato->pregunta}}"></td>
-                    <td> <input type="text" name="txtRespuesta" value="{{$dato->respuesta}}"></td>
-                    <td> <input type="text" name="txtAutor" value="{{$dato->autor}}"></td>
+                    <td> <input type="text" name="txtPregunta" value="{{$dato->pregunta}}" required></td>
+                    <td> <input type="text" name="txtRespuesta" value="{{$dato->respuesta}}" required></td>
+                    <td> <input type="text" name="txtAutor" value="{{$dato->autor}}" required></td>
                     
                     <td>
                     <button type="submit" name="btnEditar" value="btnEditar">Editar</button>    

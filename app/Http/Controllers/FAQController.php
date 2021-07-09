@@ -33,7 +33,7 @@ class FAQController extends BaseController
         $preg = $request->input('Pregunta');
         $resp = $request->input('Respuesta');
         $autor = $request->input('Autor');
-        if (strlen($preg)>0 and strlen($resp)>0){
+        if (strlen($preg)>0 and strlen($resp)>0 and strlen($autor)>0){
             DB::table('preguntas')->insert([
                 'pregunta' => $preg,
                 'respuesta' => $resp,
